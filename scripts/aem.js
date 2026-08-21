@@ -664,6 +664,7 @@ async function loadFooter(footer) {
     footer.append(footerBlock);
   }
   decorateBlock(footerBlock);
+  decorateTabCards();
   return loadBlock(footerBlock);
 }
 
@@ -728,7 +729,7 @@ async function decorateTabCards() {
 }
 
 init();
-decorateTabCards();
+
 export {
   buildBlock,
   createOptimizedPicture,
