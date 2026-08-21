@@ -702,7 +702,7 @@ async function loadSection(section, loadCallback) {
     section.dataset.sectionStatus = 'loaded';
     section.style.display = null;
   }
-  decorateTabCards();
+  
 }
 
 /**
@@ -728,7 +728,7 @@ async function decorateTabCards() {
 }
 
 init();
-
+decorateTabCards();
 export {
   buildBlock,
   createOptimizedPicture,
