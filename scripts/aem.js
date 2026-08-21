@@ -720,7 +720,7 @@ async function loadSections(element) {
   }
 }
 async function decorateTabCards(block) {
-    const tabTitles = [...document.querySelectorAll('tabcards.block')]
+    const tabTitles = [...document.querySelectorAll('.tabcards.block')]
         .map(block => block.children[0]?.textContent.trim());
 
     console.log(tabTitles);
