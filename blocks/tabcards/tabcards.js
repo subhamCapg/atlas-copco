@@ -6,7 +6,8 @@ export default async function decorate(block) {
 
     // console.log(firstTexts);
 
-    const tabTitles = rows.map(row => row.children[0].innerText.trim());
+    const tabTitles = [...document.querySelectorAll('.block')]
+        .map(block => block.children[0]?.textContent.trim());
 
     console.log(tabTitles);
 
