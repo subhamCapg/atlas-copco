@@ -26,13 +26,6 @@
         "valueType": "string",
         "name": "jsonschema",
         "label": "JSON-LD Schema"
-      },
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "pageimage",
-        "label": "Image",
-        "multi": false
       }
     ]
   },
