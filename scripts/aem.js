@@ -702,6 +702,7 @@ async function loadSection(section, loadCallback) {
     section.dataset.sectionStatus = 'loaded';
     section.style.display = null;
   }
+  decorateTabCards();
 }
 
 /**
@@ -719,7 +720,7 @@ async function loadSections(element) {
     }
   }
 }
-async function decorateTabCards(block) {
+async function decorateTabCards() {
     const tabTitles = [...document.querySelectorAll('.tabcards.block')]
         .map(block => block.children[0]?.textContent.trim());
 
