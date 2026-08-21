@@ -463,22 +463,79 @@ function decorateIcons(element, prefix = '') {
  * @param {Element} main The container element
  */
 function decorateSections(main) {
-  main.querySelectorAll(':scope > div').forEach((section) => {
+  main.querySelectorAll(':scope > div:not([data-section-status])').forEach((section) => {
     const wrappers = [];
     let defaultContent = false;
     [...section.children].forEach((e) => {
-      if (e.tagName === 'DIV' || !defaultContent) {
+      //const isHTag = ['H1', 'H2', 'H3'].includes(e.tagName);
+      if ((e.tagName === 'DIV' && e.className) || !defaultContent) {
         const wrapper = document.createElement('div');
         wrappers.push(wrapper);
-        defaultContent = e.tagName !== 'DIV';
+        const isPlainDiv = e.tagName !== 'DIV' || !e.className;
+        defaultContent = isPlainDiv ;
         if (defaultContent) wrapper.classList.add('default-content-wrapper');
+        // if(isHTag){
+        //   wrapper.classList.remove('default-content-wrapper');}
       }
       wrappers[wrappers.length - 1].append(e);
+      // if(!isHTag){wrappers[wrappers.length - 1].append(e);}
+      // else if(isHTag){const plainDiv=document.createElement('div'); plainDiv.append(e);section.append(plainDiv);}
+      // else{wrappers[wrappers.length - 1].append(e);}
+      
     });
     wrappers.forEach((wrapper) => section.append(wrapper));
     section.classList.add('section');
     section.dataset.sectionStatus = 'initialized';
     section.style.display = 'none';
+
+    // Process section metadata
+    const sectionMeta = section.querySelector('div.section-metadata');
+    if (sectionMeta) {
+      const meta = readBlockConfig(sectionMeta);
+      Object.keys(meta).forEach((key) => {
+        if (key === 'sectionclass') {
+          const styles = meta.sectionclass
+            .split(',')
+            .filter((sectionclass) => sectionclass)
+            .map((sectionclass) => toClassName(sectionclass.trim()));
+          styles.forEach((sectionclass) => section.classList.add(sectionclass));
+        }
+        else if (key === 'backgroundimg') {
+          const bgValue = meta[key];
+          const imgType = bgValue.split(/[#?]/)[0].split('.').pop().trim().toLowerCase();
+          if (imgType === 'svg' || imgType === 'gif') {
+            const errorMsg = `Unsupported image type. Please use JPG, PNG, or WebP (Found: ${imgType})`;
+
+            section.innerHTML = `
+      <div style="border: 2px dashed red; padding: 15px; color: red; font-family: sans-serif;">
+        <strong>Block Error:</strong> ${errorMsg}
+      </div>`;
+            return;
+          }
+          section.style.setProperty('--section-background', `url(${bgValue})`);
+          section.classList.add('has-background'); // Useful for CSS targeting
+        }
+        else if(key === 'customgradient'){
+          section.style.setProperty('background', `linear-gradient(${meta.customgradient})`);
+        }
+        else if(key === 'customthemes'){
+            section.classList.add(meta.customthemes);
+        }
+        else if(key === 'customcolumns'){
+          section.classList.add(meta.customcolumns);
+        }
+        else if(key === 'backgroundimageopacity'){
+          section.style.setProperty('--background-opacity', `${meta.backgroundimageopacity}%`);
+        }
+        else if (key === 'enableflip' && (meta[key] === true || meta[key] === 'true')) {
+          section.classList.add('flip-mobile');
+        }
+        else {
+          section.dataset[toCamelCase(key)] = meta[key];
+        }
+      });
+      sectionMeta.parentNode.remove();
+    }
   });
 }
 
