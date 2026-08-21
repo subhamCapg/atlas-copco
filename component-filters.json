@@ -1,0 +1,70 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "wrapper",
+      "primary-title",
+      "primary-text-block",
+      "hero",
+      "fragment",
+      "floating-banner",
+      "primary-image-block",
+      "tabs",
+      "button-variant",
+      "standalone-card",
+      "teaser-block",
+      "carousel",
+      "embed",
+      "game-detail-page",
+      "game-library",
+      "map-search",
+      "combined-search",
+      "cookie",
+      "errorpage",
+      "age-gate",
+       "page-header",
+      "page-grid-component",
+      "yesno-tile",
+      "presslisting"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tab"
+    ]
+  },
+  {
+    "id": "cards",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "carousel",
+    "components": [
+      "slide"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "button-variant",
+      "title",
+      "primary-text-block",
+      "primary-image-block"
+    ]
+  }
+]
