@@ -751,4 +751,5 @@ export {
   toClassName,
   waitForFirstImage,
   wrapTextNodes,
+  decorateTabCards
 };
