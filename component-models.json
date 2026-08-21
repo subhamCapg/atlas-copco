@@ -1,0 +1,349 @@
+[
+  {
+    "id": "page-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:title",
+        "label": "Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "jcr:description",
+        "label": "Description",
+        "required": true
+      },
+      {
+        "component": "date-time",
+        "name": "date",
+        "label": "Date",
+        "valueType": "date"
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
+        "name": "jsonschema",
+        "label": "JSON-LD Schema"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "pageimage",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "name",
+        "label": "Section Name",
+        "description": "The label shown for this section in the Content Tree"
+      },
+      {
+        "component": "text",
+        "name": "sectionclass",
+        "label": "Section Class"
+      },
+      {
+        "component": "select",
+        "name": "customthemes",
+        "label": "Theme",
+        "value": "dark-purple-theme",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Purple Rain",
+            "value": "dark-purple-theme"
+          },
+          {
+            "name": "Midnight Blue",
+            "value": "dark-midnight-theme"
+          },
+          {
+            "name": "Light Grey",
+            "value": "light-grey-theme"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "customcolumns",
+        "label": "Column Layout",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "2 column",
+            "value": "col-2"
+          },
+          {
+            "name": "3 column",
+            "value": "col-3"
+          },
+          {
+            "name": "4 column",
+            "value": "col-4"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "backgroundimg",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "number",
+        "name": "backgroundimageopacity",
+        "label": "Background Image Opacity (Set between 0% to 100%) ",
+        "valueType": "number"
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
+        "name": "customgradient",
+        "label": "Custom Gradient"
+      },
+      {
+        "component": "boolean",
+        "name": "enableFlip",
+        "label": "Want to flip column in mobile ? (Only for 2 Column)",
+        "valueType": "boolean",
+        "value": false
+      }
+    ]
+  },
+  {
+    "id": "tabcards",
+    "fields": [
+      {
+        "component": "text",
+        "name": "tabtitle",
+        "label": "Tab Title",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "testblock",
+    "fields": [
+      {
+        "component": "text",
+        "name": "tabtitle",
+        "label": "Tab Title",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description"
+      }
+    ]
+  },
+  {
+    "id": "columns",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "columns",
+        "value": "",
+        "label": "Columns"
+      },
+      {
+        "component": "text",
+        "valueType": "number",
+        "name": "rows",
+        "value": "",
+        "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "teaser-block",
+    "fields": [
+      {
+        "component": "text",
+        "name": "teaser-title",
+        "label": "Title",
+        "required": true,
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "teaser-description",
+        "label": "Description",
+        "required": true,
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "teaser-eyebrow",
+        "label": "Eyebrow Text",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "teaser-subtitle",
+        "label": "Subtitle",
+        "valueType": "string"
+      },
+      {
+        "component": "boolean",
+        "name": "issearchbox",
+        "label": "Enable Searchbox",
+        "valueType": "boolean"
+      },
+      {
+        "component": "text",
+        "name": "sku-value",
+        "label": "Game ID (for WTP Search)",
+        "valueType": "string"
+      },
+      {
+        "component": "container",
+        "name": "descriptor-hyperlink",
+        "label": "Descriptor Hyperlinks",
+        "fields": [
+          {
+            "component": "text",
+            "name": "link-descriptor",
+            "label": "Descriptor",
+            "valueType": "string"
+          },
+          {
+            "component": "text",
+            "name": "link-title",
+            "label": "Link Title",
+            "valueType": "string"
+          },
+          {
+            "component": "aem-content",
+            "name": "link-url",
+            "label": "Link Url",
+            "valueType": "string"
+          },
+          {
+            "component": "boolean",
+            "name": "url-target",
+            "label": "Open in New Tab?",
+            "valueType": "boolean"
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "teaser-button-1",
+        "label": "Button 1",
+        "fields": [
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "Button Link"
+          },
+          {
+            "component": "text",
+            "name": "linktext",
+            "label": "Button Label"
+          },
+          {
+            "component": "text",
+            "name": "linktitle",
+            "label": "Title"
+          },
+          {
+            "component": "boolean",
+            "name": "button-url-target",
+            "label": "Open in New Tab?",
+            "valueType": "boolean"
+          },
+          {
+            "component": "select",
+            "name": "buttontype",
+            "label": "Button Type",
+            "value": "primary",
+            "options": [
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "container",
+        "name": "teaser-button-2",
+        "label": "Button 2",
+        "fields": [
+          {
+            "component": "aem-content",
+            "name": "link2",
+            "label": "Button Link"
+          },
+          {
+            "component": "text",
+            "name": "linktext2",
+            "label": "Button Label"
+          },
+          {
+            "component": "text",
+            "name": "linktitle2",
+            "label": "Title"
+          },
+          {
+            "component": "boolean",
+            "name": "button-url-target2",
+            "label": "Open in New Tab?",
+            "valueType": "boolean"
+          },
+          {
+            "component": "select",
+            "name": "buttontype2",
+            "label": "Button Type",
+            "value": "primary",
+            "options": [
+              {
+                "name": "primary",
+                "value": "primary"
+              },
+              {
+                "name": "secondary",
+                "value": "secondary"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

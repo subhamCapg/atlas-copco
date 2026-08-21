@@ -1,0 +1,36 @@
+[
+  {
+    "id": "main",
+    "components": [
+      "section"
+    ]
+  },
+  {
+    "id": "section",
+    "components": [
+      "teaser-block",
+      "tabcards"
+    ]
+  },
+  {
+    "id": "tabcards",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "columns",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "button-variant",
+      "title",
+      "primary-text-block",
+      "primary-image-block"
+    ]
+  }
+]
