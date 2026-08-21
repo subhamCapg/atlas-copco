@@ -5,5 +5,10 @@ export default async function decorate(block) {
     // const firstTexts = rows.map(row => row.children[0]?.innerText || "");
 
     // console.log(firstTexts);
+    const rows = [...block.children];
+
+    const tabTitles = rows.map(row => row.children[0].innerText.trim());
+
+    console.log(tabTitles);
 
 }
