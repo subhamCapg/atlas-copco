@@ -754,6 +754,7 @@ async function decorateTabCards() {
     <div class="cards-container">
     </div>
   </div>`;
+  block.appendChild(tabCardsContainer);
   const tabsContainer = document.querySelector(".tabs");
   const cardsContainer = document.querySelector(".cards-container");
 
