@@ -134,10 +134,36 @@
     "id": "testblock",
     "fields": [
       {
-        "component": "text",
-        "name": "tabtitle",
-        "label": "Tab Title",
-        "valueType": "string"
+        "component": "container",
+        "name": "cardItems",
+        "label": "Card Items",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "tabtitle",
+            "label": "Tab Title"
+          },
+          {
+            "component": "text",
+            "name": "title",
+            "label": "Card Title",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "image",
+            "label": "Card Image",
+            "valueType": "string"
+          },
+          {
+            "component": "textarea",
+            "valueType": "string",
+            "name": "description",
+            "label": "Description"
+          }
+        ]
       }
     ]
   },
@@ -162,6 +188,12 @@
         "valueType": "string",
         "name": "description",
         "label": "Description"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "relatedtab",
+        "label": "Related Tab"
       }
     ]
   },
