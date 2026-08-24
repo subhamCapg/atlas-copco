@@ -741,9 +741,9 @@ async function decorateTabCards() {
       };
     });
   tabcardsblock.textContent = '';
-  tabcardsblock.forEach((block) => {
-    block.textContent = '';
-  });
+  // tabcardsblock.forEach((block) => {
+  //   block.textContent = '';
+  // });
 
   console.log(tabsData);
 
