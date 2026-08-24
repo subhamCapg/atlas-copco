@@ -722,6 +722,7 @@ async function loadSections(element) {
   }
 }
 async function decorateTabCards() {
+  const tabcardsblock = [...document.querySelectorAll('.tabcards.block')];
   const tabTitles = [...document.querySelectorAll('.tabcards.block')]
     .map(block => block.children[0]?.textContent.trim());
 
@@ -738,6 +739,7 @@ async function decorateTabCards() {
         })),
       };
     });
+    tabcardsblock.textContent = '';
 
   console.log(tabsData);
 
