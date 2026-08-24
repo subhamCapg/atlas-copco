@@ -3,7 +3,10 @@ export default async function decorate(block) {
 
     const tabTitlesRow = rows[0];
     const cardRows = rows.slice(1); // all divs except first one
-    const tabs = tabTitlesRow.textContent.split(',');
+    const tabs = tabTitlesRow.textContent
+        .split(',')
+        .map(tab => tab.trim());
+
 
     console.log(tabs);
     const cards = cardRows.map((card) => {
@@ -34,7 +37,7 @@ export default async function decorate(block) {
     const tabContent = document.createElement('div');
     tabContent.className = 'tabs-content';
     tabContainer.append(tabNavs, tabContent);
-    
+
     tabs.forEach((tab, index) => {
         const tabButton = document.createElement('button');
         tabButton.textContent = tab;
