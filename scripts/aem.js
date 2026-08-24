@@ -17,7 +17,7 @@ function sampleRUM(checkpoint, data) {
   try {
     window.hlx = window.hlx || {};
     if (!window.hlx.rum || !window.hlx.rum.collector) {
-      sampleRUM.enhance = () => {};
+      sampleRUM.enhance = () => { };
       const params = new URLSearchParams(window.location.search);
       const { currentScript } = document;
       const rate = params.get('rum')
@@ -472,7 +472,7 @@ function decorateSections(main) {
         const wrapper = document.createElement('div');
         wrappers.push(wrapper);
         const isPlainDiv = e.tagName !== 'DIV' || !e.className;
-        defaultContent = isPlainDiv ;
+        defaultContent = isPlainDiv;
         if (defaultContent) wrapper.classList.add('default-content-wrapper');
         // if(isHTag){
         //   wrapper.classList.remove('default-content-wrapper');}
@@ -481,7 +481,7 @@ function decorateSections(main) {
       // if(!isHTag){wrappers[wrappers.length - 1].append(e);}
       // else if(isHTag){const plainDiv=document.createElement('div'); plainDiv.append(e);section.append(plainDiv);}
       // else{wrappers[wrappers.length - 1].append(e);}
-      
+
     });
     wrappers.forEach((wrapper) => section.append(wrapper));
     section.classList.add('section');
@@ -515,16 +515,16 @@ function decorateSections(main) {
           section.style.setProperty('--section-background', `url(${bgValue})`);
           section.classList.add('has-background'); // Useful for CSS targeting
         }
-        else if(key === 'customgradient'){
+        else if (key === 'customgradient') {
           section.style.setProperty('background', `linear-gradient(${meta.customgradient})`);
         }
-        else if(key === 'customthemes'){
-            section.classList.add(meta.customthemes);
+        else if (key === 'customthemes') {
+          section.classList.add(meta.customthemes);
         }
-        else if(key === 'customcolumns'){
+        else if (key === 'customcolumns') {
           section.classList.add(meta.customcolumns);
         }
-        else if(key === 'backgroundimageopacity'){
+        else if (key === 'backgroundimageopacity') {
           section.style.setProperty('--background-opacity', `${meta.backgroundimageopacity}%`);
         }
         else if (key === 'enableflip' && (meta[key] === true || meta[key] === 'true')) {
@@ -703,7 +703,7 @@ async function loadSection(section, loadCallback) {
     section.dataset.sectionStatus = 'loaded';
     section.style.display = null;
   }
-  
+
 }
 
 /**
@@ -722,10 +722,26 @@ async function loadSections(element) {
   }
 }
 async function decorateTabCards() {
-    const tabTitles = [...document.querySelectorAll('.tabcards.block')]
-        .map(block => block.children[0]?.textContent.trim());
+  const tabTitles = [...document.querySelectorAll('.tabcards.block')]
+    .map(block => block.children[0]?.textContent.trim());
 
-    console.log(tabTitles);
+  const tabsData = [...document.querySelectorAll('.tabcards')]
+    .map((block) => {
+      const rows = [...block.children];
+
+      return {
+        tabTitle: rows[0].textContent.trim(),
+        cards: rows.slice(1).map((card) => ({
+          image: card.querySelector('img')?.src || '',
+          title: card.children[1]?.textContent.trim() || '',
+          description: card.children[2]?.textContent.trim() || '',
+        })),
+      };
+    });
+
+  console.log(tabsData);
+
+  console.log(tabTitles);
 }
 
 init();
