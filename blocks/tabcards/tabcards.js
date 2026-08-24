@@ -38,14 +38,62 @@ export default async function decorate(block) {
     tabContent.className = 'tabs-content';
     tabContainer.append(tabNavs, tabContent);
 
+    block.append(tabContainer);
     tabs.forEach((tab, index) => {
+        // Tab button
         const tabButton = document.createElement('button');
         tabButton.textContent = tab;
         tabButton.className = 'tab-btn';
-        tabNavs.append(tabButton);
-    });
-    block.append(tabContainer);
 
+        if (index === 0) {
+            tabButton.classList.add('active');
+        }
+
+        tabNavs.append(tabButton);
+
+        // Content panel
+        const tabPanel = document.createElement('div');
+        tabPanel.className = 'tab-panel';
+
+        if (index === 0) {
+            tabPanel.classList.add('active');
+        }
+
+        const cards = groupedCards[tab] || [];
+
+        cards.forEach((card) => {
+            const cardEl = document.createElement('div');
+            cardEl.className = 'tab-card';
+
+            cardEl.innerHTML = `
+      <div class="tab-card-image">
+        ${card.image?.outerHTML || ''}
+      </div>
+      <div class="tab-card-content">
+        <h3>${card.title}</h3>
+        <p>${card.description}</p>
+      </div>
+     `;
+
+            tabPanel.append(cardEl);
+        });
+
+        tabContent.append(tabPanel);
+
+        // Tab click handler
+        tabButton.addEventListener('click', () => {
+            tabNavs.querySelectorAll('.tab-btn').forEach((btn) => {
+                btn.classList.remove('active');
+            });
+
+            tabContent.querySelectorAll('.tab-panel').forEach((panel) => {
+                panel.classList.remove('active');
+            });
+
+            tabButton.classList.add('active');
+            tabPanel.classList.add('active');
+        });
+    });
 
 
 }
