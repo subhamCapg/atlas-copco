@@ -140,30 +140,28 @@
         "multi": true,
         "fields": [
           {
-            "component": "container",
+            "component": "text",
+            "valueType": "string",
             "name": "tabtitle",
-            "label": "Tab Title",
-            "multi": true,
-            "fields": [
-              {
-                "component": "text",
-                "name": "title",
-                "label": "Card Title",
-                "valueType": "string"
-              },
-              {
-                "component": "reference",
-                "name": "image",
-                "label": "Card Image",
-                "valueType": "string"
-              },
-              {
-                "component": "textarea",
-                "valueType": "string",
-                "name": "description",
-                "label": "Description"
-              }
-            ]
+            "label": "Tab Title"
+          },
+          {
+            "component": "text",
+            "name": "title",
+            "label": "Card Title",
+            "valueType": "string"
+          },
+          {
+            "component": "reference",
+            "name": "image",
+            "label": "Card Image",
+            "valueType": "string"
+          },
+          {
+            "component": "textarea",
+            "valueType": "string",
+            "name": "description",
+            "label": "Description"
           }
         ]
       }

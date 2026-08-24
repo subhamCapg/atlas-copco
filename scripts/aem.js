@@ -664,7 +664,7 @@ async function loadFooter(footer) {
     footer.append(footerBlock);
   }
   decorateBlock(footerBlock);
-  decorateTabCards();
+  //decorateTabCards();
   return loadBlock(footerBlock);
 }
 
@@ -721,91 +721,91 @@ async function loadSections(element) {
     }
   }
 }
-async function decorateTabCards() {
-  const maintabContainer = document.querySelector('.tabcards-container');
-  const tabcardsblock = [...document.querySelectorAll('.tabcards')];
-  const tabTitles = [...document.querySelectorAll('.tabcards.block')]
-    .map(block => block.children[0]?.textContent.trim());
+// async function decorateTabCards() {
+//   const maintabContainer = document.querySelector('.tabcards-container');
+//   const tabcardsblock = [...document.querySelectorAll('.tabcards')];
+//   const tabTitles = [...document.querySelectorAll('.tabcards.block')]
+//     .map(block => block.children[0]?.textContent.trim());
 
-  const tabsData = [...document.querySelectorAll('.tabcards')]
-    .map((block) => {
-      const rows = [...block.children];
+//   const tabsData = [...document.querySelectorAll('.tabcards')]
+//     .map((block) => {
+//       const rows = [...block.children];
 
-      return {
-        tabTitle: rows[0].textContent.trim(),
-        cards: rows.slice(1).map((card) => ({
-          image: card.querySelector('img')?.src || '',
-          title: card.children[1]?.textContent.trim() || '',
-          description: card.children[2]?.textContent.trim() || '',
-        })),
-      };
-    });
-  tabcardsblock.textContent = '';
-  // tabcardsblock.forEach((block) => {
-  //   block.textContent = '';
-  // });
+//       return {
+//         tabTitle: rows[0].textContent.trim(),
+//         cards: rows.slice(1).map((card) => ({
+//           image: card.querySelector('img')?.src || '',
+//           title: card.children[1]?.textContent.trim() || '',
+//           description: card.children[2]?.textContent.trim() || '',
+//         })),
+//       };
+//     });
+//   tabcardsblock.textContent = '';
+//   // tabcardsblock.forEach((block) => {
+//   //   block.textContent = '';
+//   // });
 
-  console.log(tabsData);
+//   console.log(tabsData);
 
-  console.log(tabTitles);
-  const tabCardsContainer = document.createElement('div');
-  tabCardsContainer.innerHTML = `
-  <div class="tab-cards-container">
-    <div class="tabs"></div>
-    <div class="cards-container">
-    </div>
-  </div>`;
-  maintabContainer.appendChild(tabCardsContainer);
-  const tabsContainer = document.querySelector(".tabs");
-  const cardsContainer = document.querySelector(".cards-container");
+//   console.log(tabTitles);
+//   const tabCardsContainer = document.createElement('div');
+//   tabCardsContainer.innerHTML = `
+//   <div class="tab-cards-container">
+//     <div class="tabs"></div>
+//     <div class="cards-container">
+//     </div>
+//   </div>`;
+//   maintabContainer.appendChild(tabCardsContainer);
+//   const tabsContainer = document.querySelector(".tabs");
+//   const cardsContainer = document.querySelector(".cards-container");
 
-  function renderCards(cards) {
-    cardsContainer.innerHTML = cards
-      .map(
-        (card) => `
-        <div class="card">
-          ${card.image}
+//   function renderCards(cards) {
+//     cardsContainer.innerHTML = cards
+//       .map(
+//         (card) => `
+//         <div class="card">
+//           ${card.image}
 
-          <div class="card-content">
-            <h2>${card.title}</h2>
-            <p>${card.description}</p>
-          </div>
-        </div>
-      `
-      )
-      .join("");
-  }
+//           <div class="card-content">
+//             <h2>${card.title}</h2>
+//             <p>${card.description}</p>
+//           </div>
+//         </div>
+//       `
+//       )
+//       .join("");
+//   }
 
-  function createTabs(data) {
-    tabsContainer.innerHTML = "";
+//   function createTabs(data) {
+//     tabsContainer.innerHTML = "";
 
-    data.forEach((tab, index) => {
-      const button = document.createElement("button");
+//     data.forEach((tab, index) => {
+//       const button = document.createElement("button");
 
-      button.textContent = tab.tabTitle;
-      button.classList.add("tab");
+//       button.textContent = tab.tabTitle;
+//       button.classList.add("tab");
 
-      if (index === 0) {
-        button.classList.add("active");
-        renderCards(tab.cards);
-      }
+//       if (index === 0) {
+//         button.classList.add("active");
+//         renderCards(tab.cards);
+//       }
 
-      button.addEventListener("click", () => {
-        document
-          .querySelectorAll(".tab")
-          .forEach((btn) => btn.classList.remove("active"));
+//       button.addEventListener("click", () => {
+//         document
+//           .querySelectorAll(".tab")
+//           .forEach((btn) => btn.classList.remove("active"));
 
-        button.classList.add("active");
+//         button.classList.add("active");
 
-        renderCards(tab.cards);
-      });
+//         renderCards(tab.cards);
+//       });
 
-      tabsContainer.appendChild(button);
-    });
-  }
+//       tabsContainer.appendChild(button);
+//     });
+//   }
 
-  createTabs(tabsData);
-}
+//   createTabs(tabsData);
+// }
 
 
 init();
