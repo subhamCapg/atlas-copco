@@ -832,6 +832,5 @@ export {
   toCamelCase,
   toClassName,
   waitForFirstImage,
-  wrapTextNodes,
-  decorateTabCards
+  wrapTextNodes
 };
