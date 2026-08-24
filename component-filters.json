@@ -8,40 +8,12 @@
   {
     "id": "section",
     "components": [
-      "wrapper",
-      "primary-title",
-      "primary-text-block",
-      "hero",
-      "fragment",
-      "floating-banner",
-      "primary-image-block",
-      "tabs",
-      "button-variant",
-      "standalone-card",
       "teaser-block",
-      "carousel",
-      "embed",
-      "game-detail-page",
-      "game-library",
-      "map-search",
-      "combined-search",
-      "cookie",
-      "errorpage",
-      "age-gate",
-       "page-header",
-      "page-grid-component",
-      "yesno-tile",
-      "presslisting"
+      "tabcards"
     ]
   },
   {
-    "id": "tabs",
-    "components": [
-      "tab"
-    ]
-  },
-  {
-    "id": "cards",
+    "id": "tabcards",
     "components": [
       "card"
     ]
@@ -50,12 +22,6 @@
     "id": "columns",
     "components": [
       "column"
-    ]
-  },
-  {
-    "id": "carousel",
-    "components": [
-      "slide"
     ]
   },
   {
