@@ -38,7 +38,6 @@ export default async function decorate(block) {
     tabContent.className = 'tabs-content';
     tabContainer.append(tabNavs, tabContent);
 
-    block.append(tabContainer);
     tabs.forEach((tab, index) => {
         // Tab button
         const tabButton = document.createElement('button');
@@ -94,6 +93,6 @@ export default async function decorate(block) {
             tabPanel.classList.add('active');
         });
     });
-
+    block.append(tabContainer);
 
 }
