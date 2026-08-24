@@ -722,6 +722,7 @@ async function loadSections(element) {
   }
 }
 async function decorateTabCards() {
+  const maintabContainer = document.querySelector('.tabcards-container');
   const tabcardsblock = [...document.querySelectorAll('.tabcards')];
   const tabTitles = [...document.querySelectorAll('.tabcards.block')]
     .map(block => block.children[0]?.textContent.trim());
@@ -754,7 +755,7 @@ async function decorateTabCards() {
     <div class="cards-container">
     </div>
   </div>`;
-  block.appendChild(tabCardsContainer);
+  maintabContainer.appendChild(tabCardsContainer);
   const tabsContainer = document.querySelector(".tabs");
   const cardsContainer = document.querySelector(".cards-container");
 
