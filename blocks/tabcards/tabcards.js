@@ -93,7 +93,7 @@ export default async function decorate(block) {
             tabPanel.classList.add('active');
         });
     });
-    block.replaceWith(tabContainer);
-   // block.append(tabContainer);
+    //block.replaceWith(tabContainer);
+    block.prepend(tabContainer);
 
 }
