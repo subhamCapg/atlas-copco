@@ -739,15 +739,72 @@ async function decorateTabCards() {
         })),
       };
     });
-    tabcardsblock.textContent = '';
-    tabcardsblock.forEach((block) => {
-      block.textContent = '';
-    });
+  tabcardsblock.textContent = '';
+  tabcardsblock.forEach((block) => {
+    block.textContent = '';
+  });
 
   console.log(tabsData);
 
   console.log(tabTitles);
+  const tabCardsContainer = document.createElement('div');
+  tabCardsContainer.innerHTML = `
+  <div class="tab-cards-container">
+    <div class="tabs"></div>
+    <div class="cards-container">
+    </div>
+  </div>`;
+  const tabsContainer = document.querySelector(".tabs");
+  const cardsContainer = document.querySelector(".cards-container");
+
+  function renderCards(cards) {
+    cardsContainer.innerHTML = cards
+      .map(
+        (card) => `
+        <div class="card">
+          ${card.image}
+
+          <div class="card-content">
+            <h2>${card.title}</h2>
+            <p>${card.description}</p>
+          </div>
+        </div>
+      `
+      )
+      .join("");
+  }
+
+  function createTabs(data) {
+    tabsContainer.innerHTML = "";
+
+    data.forEach((tab, index) => {
+      const button = document.createElement("button");
+
+      button.textContent = tab.tabTitle;
+      button.classList.add("tab");
+
+      if (index === 0) {
+        button.classList.add("active");
+        renderCards(tab.cards);
+      }
+
+      button.addEventListener("click", () => {
+        document
+          .querySelectorAll(".tab")
+          .forEach((btn) => btn.classList.remove("active"));
+
+        button.classList.add("active");
+
+        renderCards(tab.cards);
+      });
+
+      tabsContainer.appendChild(button);
+    });
+  }
+
+  createTabs(tabsData);
 }
+
 
 init();
 
