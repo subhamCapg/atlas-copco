@@ -1,6 +1,6 @@
 export default async function decorate(block) {
     const rows = [...block.children];
-
+    block.textContent = '';
     const tabTitlesRow = rows[0];
     const cardRows = rows.slice(1); // all divs except first one
     const tabs = tabTitlesRow.textContent
@@ -44,6 +44,7 @@ export default async function decorate(block) {
         tabButton.className = 'tab-btn';
         tabNavs.append(tabButton);
     });
+    block.append(tabContainer);
 
 
 
