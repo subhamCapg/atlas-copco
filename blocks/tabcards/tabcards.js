@@ -5,7 +5,7 @@ export default async function decorate(block) {
     const cardRows = rows.slice(1); // all divs except first one
     const tabs = [...tabTitlesRow.children].map(
         (tab) => tab.textContent.trim(),
-    );
+    ).split(',');
 
     console.log(tabs);
     const cards = cardRows.map((card) => {
@@ -29,6 +29,20 @@ export default async function decorate(block) {
     });
 
     console.log(groupedCards);
+    const tabContainer = document.createElement('div');
+    tabContainer.className = 'tab-container';
+    const tabNavs = document.createElement('div');
+    tabNavs.className = 'tab-nav';
+    const tabContent = document.createElement('div');
+    tabContent.className = 'tabs-content';
+    tabContainer.append(tabNavs, tabContent);
+    
+    tabs.forEach((tab, index) => {
+        const tabButton = document.createElement('button');
+        tabButton.textContent = tab;
+        tabButton.className = 'tab-btn';
+        tabNavs.append(tabButton);
+    });
 
 
 
