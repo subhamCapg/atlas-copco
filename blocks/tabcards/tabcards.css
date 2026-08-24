@@ -1,0 +1,14 @@
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.tab-btn.active {
+  background: #000;
+  color: #fff;
+}
