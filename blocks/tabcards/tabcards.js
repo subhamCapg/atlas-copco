@@ -3,9 +3,7 @@ export default async function decorate(block) {
 
     const tabTitlesRow = rows[0];
     const cardRows = rows.slice(1); // all divs except first one
-    const tabs = [...tabTitlesRow.children].map(
-        (tab) => tab.textContent.trim(),
-    ).split(',');
+    const tabs = tabTitlesRow.textContent.split(',');
 
     console.log(tabs);
     const cards = cardRows.map((card) => {
