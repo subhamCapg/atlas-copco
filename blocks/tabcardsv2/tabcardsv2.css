@@ -6,3 +6,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
 }
+.tab-titles-source{
+    display: none;
+}
