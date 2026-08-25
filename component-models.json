@@ -168,6 +168,16 @@
     ]
   },
   {
+    "id": "tabcardsv2",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "tabdetails",
+        "label": "Tab Details"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {

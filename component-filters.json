@@ -10,7 +10,8 @@
     "components": [
       "teaser-block",
       "tabcards",
-      "testblock"
+      "testblock",
+      "tabcardsv2"
     ]
   },
   {
