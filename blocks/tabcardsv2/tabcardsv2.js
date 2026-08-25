@@ -8,6 +8,8 @@ export default async function decorate(block) {
     const data = await res.json();
     console.log('Data:', data);
     block.innerHTML = '';
-    console.log('Responseee:', data);
+    const tabTitles=data[':names'];
+    console.log('Tab Titles:', tabTitles);
+
 
 }
