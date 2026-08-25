@@ -3,11 +3,11 @@ export default async function decorate(block) {
     console.log('Rows:', rows);
     const spreadsheetPath = rows[0].textContent.trim().split('/').filter(Boolean).pop();
     console.log('Spreadsheet Path:', spreadsheetPath);
-    const response=fetch(`${spreadsheetPath}.json`).then((response) => response.json()).then((data) => {
-        console.log('Data:', data);
-        return data;
-        });
-        block.innerHTML = '';
-        console.log('Responseee:', response);
+
+    const res = await fetch(`${spreadsheetPath}.json`);
+    const data = await res.json();
+    console.log('Data:', data);
+    block.innerHTML = '';
+    console.log('Responseee:', data);
 
 }
