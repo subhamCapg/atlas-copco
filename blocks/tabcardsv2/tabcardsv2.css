@@ -1,0 +1,8 @@
+.tab-panel.active {
+    grid-gap: 1pc;
+    display: grid;
+    float: none;
+    margin: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+}
