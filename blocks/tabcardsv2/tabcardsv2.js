@@ -6,4 +6,5 @@ export default async function decorate(block) {
     const response=fetch(`${spreadsheetPath}.json`).then((response) => response.json()).then((data) => {
         console.log('Data:', data);
         });
+        block.innerHTML = '';
 }
