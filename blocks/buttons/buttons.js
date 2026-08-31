@@ -1,6 +1,6 @@
 export async function decorate(block) {
   // Clear any existing content inside the block
-  
+
   block.textContent = '';
 
   // Create elements
@@ -23,5 +23,5 @@ export async function decorate(block) {
   // Assemble the hierarchy
   button.append(textSpan);
   wrapperDiv.append(button);
-  block.append(wrapperDiv);
+  block.prepend(wrapperDiv);
 }
