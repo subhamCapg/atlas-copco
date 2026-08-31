@@ -177,6 +177,16 @@
       }
     ]
   },
+   {
+    "id": "buttons",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "tabdetails",
+        "label": "Tab Details"
+      }
+    ]
+  },
   {
     "id": "card",
     "fields": [
