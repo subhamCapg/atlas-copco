@@ -233,9 +233,27 @@ export default async function decorate(block) {
         tabContent
     );
 
+    const wrapperDiv = document.createElement('div');
+  const button = document.createElement('button');
+  const textSpan = document.createElement('span');
 
+  // Configure wrapper div
+  wrapperDiv.className = 'button cmp-button--primary';
 
-    block.append(tabContainer);
+  // Configure button
+  button.id = 'button-5487aab983';
+  button.type = 'button';
+  button.className = 'cmp-button';
+
+  // Configure text span
+  textSpan.className = 'cmp-button__text';
+  textSpan.textContent = 'Button';
+
+  // Assemble the hierarchy
+  button.append(textSpan);
+  wrapperDiv.append(button);
+
+    block.append(tabContainer, wrapperDiv);
 
 
 }
