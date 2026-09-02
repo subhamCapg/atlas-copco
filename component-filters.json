@@ -12,7 +12,10 @@
       "tabcards",
       "testblock",
       "tabcardsv2",
-      "buttons"
+      "buttons",
+      "primary-image-block",
+      "primary-text-block",
+      "primary-title"
     ]
   },
   {

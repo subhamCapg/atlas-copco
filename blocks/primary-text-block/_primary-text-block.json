@@ -1,0 +1,78 @@
+{
+    "definitions": [
+        {
+            "title": "Text",
+            "id": "primary-text-block",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Primary-Text-Block",
+                            "model": "primary-text-block"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "primary-text-block",
+            "fields": [
+                {
+                    "component": "richtext",
+                    "name": "typescaleText",
+                    "label": "Text"
+                },
+                {
+                    "component": "select",
+                    "name": "classes",
+                    "label": "Select Typescale",
+                    "options": [
+                        {
+                            "name": "Body Copy XLarge",
+                            "value": "bodycopyxlarge"
+                        },
+                        {
+                            "name": "Body Copy Large",
+                            "value": "bodycopylarge"
+                        },
+                        {
+                            "name": "Body Copy",
+                            "value": "bodycopy"
+                        },
+                        {
+                            "name": "Body Copy Small",
+                            "value": "bodycopysmall"
+                        },
+                        {
+                            "name": "Micro/disclosures",
+                            "value": "microdiscloures"
+                        }
+                    ]
+                },
+                {
+                    "component": "select",
+                    "name": "textAlignment",
+                    "label": "Text Alignment",
+                    "options": [
+                        {
+                            "name": "Left",
+                            "value": "text-left"
+                        },
+                        {
+                            "name": "Center",
+                            "value": "text-center"
+                        },
+                        {
+                            "name": "Right",
+                            "value": "text-right"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "filters": []
+}

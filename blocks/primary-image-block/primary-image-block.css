@@ -1,0 +1,82 @@
+/* 
+.primary-image-block {
+    margin: 80px;
+    padding: 16px 8px 16px 8px;
+}
+
+@media (767px <=width <=850px) {
+    .primary-image-block {
+    margin: 32px;
+}}
+
+@media screen and (max-width: 767px) {
+
+  .primary-image-block {
+  margin: 16px !important;
+}
+}
+
+@media (350px <=width <=400px){
+    .primary-image-block {
+  margin: -13px !important;
+}
+} */
+
+.primary-image-block {
+  position: relative;
+}
+
+.primary-image-block>div>div {
+  position: relative;
+}
+
+.primary-image-block>div>div picture {
+  max-width: 100%;
+  width: auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+
+.primary-image-block>div>div .has-logo>picture img {
+  object-fit: cover;
+}
+
+.primary-image-block a {
+  display: inline-block;
+  position: relative;
+}
+
+.primary-image-block .logo-wrap {
+  width: 100%;
+  max-width: 90%;
+  max-height:90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+}
+.logo-wrap picture{
+  width:100% !important;
+}
+.primary-image-block .logo-wrap img {
+  aspect-ratio: auto;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: unset;
+}
+
+/* @media screen and (max-width: 1025px) {
+  .primary-image-block .logo-wrap {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .primary-image-block .logo-wrap {
+    width: 350px;
+    height: 350px;
+  }
+} */

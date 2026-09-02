@@ -159,6 +159,51 @@
               }
             }
           }
+        },
+        {
+          "title": "Text",
+          "id": "primary-text-block",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Primary-Text-Block",
+                  "model": "primary-text-block"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Image",
+          "id": "primary-image-block",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Primary-image-Block",
+                  "model": "primary-image-block"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Title",
+          "id": "primary-title",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Primary Title",
+                  "model": "primary-title"
+                }
+              }
+            }
+          }
         }
       ]
     }

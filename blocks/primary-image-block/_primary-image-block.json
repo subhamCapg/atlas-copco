@@ -1,0 +1,58 @@
+{
+    "definitions": [
+        {
+            "title": "Image",
+            "id": "primary-image-block",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Primary-image-Block",
+                            "model": "primary-image-block"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "primary-image-block",
+            "fields": [
+                {
+                    "component": "reference",
+                     "valueType": "string",
+                    "name": "image",
+                    "label": "Image",
+                    "multi": false,
+                    "validation": {
+                        "pattern": "^.*\\.(jpg|jpeg|png|webp)$",
+                        "errorMessage": "Please select a valid image file (JPG, PNG, WebP,JPEG)."
+                    }
+                },
+                {
+                    "component": "text",
+                    "valueType": "string",
+                    "name": "alt",
+                    "label": "Alt Text",
+                    "required": true
+                },
+                {
+                    "component": "aem-content",
+                    "valueType": "string",
+                    "name": "testlink",
+                    "label": "Link"
+                },
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "logo-image",
+                    "label": "Logo Image(Optional)",
+                    "multi": false
+                }
+            ]
+        }
+    ],
+    "filters": []
+}

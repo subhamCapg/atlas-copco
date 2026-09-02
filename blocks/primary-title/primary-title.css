@@ -1,0 +1,23 @@
+/* 
+.primary-title {
+    margin: 80px;
+    padding: 16px 8px 16px 8px;
+}
+
+@media (767px <=width <=850px) {
+    .primary-title {
+    margin: 32px;
+}}
+
+@media (400px <=width <=767px){
+
+  .primary-title {
+  margin: 16px !important;
+}
+}
+
+@media (350px <=width <=400px){
+    .primary-title {
+  margin: -13px !important;
+}
+} */

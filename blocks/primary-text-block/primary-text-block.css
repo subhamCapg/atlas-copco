@@ -1,0 +1,754 @@
+.primary-text-block p {
+    /* text-align: justify; */
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+/* text left/right/center */
+
+/* ALIGNMENT FOR HEADINGS AND PARAGRAPHS */
+.primary-text-block.text-left {
+    text-align: left !important;
+}
+
+.primary-text-block.text-center {
+    text-align: center !important;
+}
+
+.primary-text-block.text-right {
+    text-align: right !important;
+}
+
+
+.primary-text-block {
+    overflow: visible !important;
+    text-align: inherit;
+}
+
+
+
+.primary-text-block h1,
+.primary-text-block h2,
+.primary-text-block h3,
+.primary-text-block h4,
+.primary-text-block h5,
+.primary-text-block h6 {
+    display: inline-block;
+    max-width: fit-content;
+    word-wrap: break-word;
+    overflow: visible;
+}
+
+
+
+
+.primary-text-block.text-left h1,
+.primary-text-block.text-left h2,
+.primary-text-block.text-left h3,
+.primary-text-block.text-left h4,
+.primary-text-block.text-left h5,
+.primary-text-block.text-left h6,
+.primary-text-block.text-left p {
+    text-align: left;
+}
+
+.primary-text-block.text-center h1,
+.primary-text-block.text-center h2,
+.primary-text-block.text-center h3,
+.primary-text-block.text-center h4,
+.primary-text-block.text-center h5,
+.primary-text-block.text-center h6,
+.primary-text-block.text-center p {
+    text-align: center;
+}
+
+.primary-text-block.text-right h1,
+.primary-text-block.text-right h2,
+.primary-text-block.text-right h3,
+.primary-text-block.text-right h4,
+.primary-text-block.text-right h5,
+.primary-text-block.text-right h6,
+.primary-text-block.text-right p {
+    text-align: right;
+}
+
+.primary-text-block h1 em,
+.primary-text-block h2 em,
+.primary-text-block h3 em,
+.primary-text-block h4 em,
+.primary-text-block h5 em,
+.primary-text-block h6 em {
+    display: inline-block;
+    transform: none;
+    margin-left: -0.05em;
+}
+
+.primary-text-block.text-left h1 em::before,
+.primary-text-block.text-left h2 em::before,
+.primary-text-block.text-left h3 em::before,
+.primary-text-block.text-left h4 em::before,
+.primary-text-block.text-left h5 em::before,
+.primary-text-block.text-left h6 em::before,
+.primary-text-block.text-center h1 em::before,
+.primary-text-block.text-center h2 em::before,
+.primary-text-block.text-center h3 em::before,
+.primary-text-block.text-center h4 em::before,
+.primary-text-block.text-center h5 em::before,
+.primary-text-block.text-center h6 em::before,
+.primary-text-block.text-right h1 em::before,
+.primary-text-block.text-right h2 em::before,
+.primary-text-block.text-right h3 em::before,
+.primary-text-block.text-right h4 em::before,
+.primary-text-block.text-right h5 em::before,
+.primary-text-block.text-right h6 em::before {
+    content: none;
+    /* removes left spacing */
+}
+
+/* Add right spacing */
+.primary-text-block.text-left h1 em::after,
+.primary-text-block.text-left h2 em::after,
+.primary-text-block.text-left h3 em::after,
+.primary-text-block.text-left h4 em::after,
+.primary-text-block.text-left h5 em::after,
+.primary-text-block.text-left h6 em::after,
+.primary-text-block.text-center h1 em::after,
+.primary-text-block.text-center h2 em::after,
+.primary-text-block.text-center h3 em::after,
+.primary-text-block.text-center h4 em::after,
+.primary-text-block.text-center h5 em::after,
+.primary-text-block.text-center h6 em::after,
+.primary-text-block.text-right h1 em::after,
+.primary-text-block.text-right h2 em::after,
+.primary-text-block.text-right h3 em::after,
+.primary-text-block.text-right h4 em::after,
+.primary-text-block.text-right h5 em::after,
+.primary-text-block.text-right h6 em::after {
+    content: "";
+    display: inline-block;
+    width: 0.12em;
+    /* space after <em> to prevent italics cutoff */
+}
+
+
+/* Bullet points for para  */
+
+/* Base styles for all lists */
+
+
+/* Base styles for all lists */
+/* =========================
+   BASE STYLES FOR ALL LISTS
+   ========================= */
+.primary-text-block ul,
+.primary-text-block ol {
+    padding: 0;
+    margin: 0;
+}
+
+/* =========================
+   LEFT-ALIGNED LISTS
+   ========================= */
+.primary-text-block.text-left ul {
+    list-style: none; /* custom bullets only */
+}
+
+.primary-text-block.text-left ul li {
+    position: relative;
+    margin-bottom: 0.8em;
+    line-height: 1.5;
+    padding-left: 1.5em;
+}
+
+.primary-text-block.text-left ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* OL numbers */
+.primary-text-block.text-left ol {
+    list-style: decimal inside; /* numbers inside li */
+    padding-left: 0;            /* no extra padding */
+}
+
+.primary-text-block.text-left ol li {
+    display: list-item;          /* important for numbers to appear */
+    margin-bottom: 0.8em;
+}
+
+.primary-text-block.text-left ol li::before {
+    content: none; /* remove any custom bullet */
+}
+
+.primary-text-block.text-left ul,
+.primary-text-block.text-left ol {
+    text-align: left;
+}
+
+/* =========================
+   RIGHT-ALIGNED LISTS
+   ========================= */
+
+.primary-text-block.text-right ul {
+    list-style: none;
+    text-align: right;
+}
+
+.primary-text-block.text-right ul li {
+    display: flex;             
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin-bottom: 0.8em;
+}
+
+.primary-text-block.text-right ul li::before {
+    content: "•";              
+    margin-right: 0.5em;
+    flex-shrink: 0;
+}
+
+/* -----------------
+   OL - numbers
+   ----------------- */
+.primary-text-block.text-right ol {
+    list-style: decimal inside; /* numbers inside li */
+    padding-left: 0;
+    text-align: right;          /* numbers + text aligned right */
+}
+
+.primary-text-block.text-right ol li {
+    display: list-item !important;   /* ensure li is list-item */
+    text-align: right;
+    margin-bottom: 0.8em;
+}
+
+/* Force OL marker to appear */
+.primary-text-block.text-right ol li::marker {
+    display: inline;
+    content: counter(list-item) ". ";  /* always show number */
+    font-weight: normal;
+    color: inherit;
+}
+
+/* Anchor and span inside li */
+.primary-text-block.text-right ol li a,
+.primary-text-block.text-right ol li span {
+    display: inline;         /* NOT flex */
+    max-width: 100%;
+    word-wrap: break-word;
+    text-align: right;
+}
+
+
+
+
+/* =========================
+   CENTER-ALIGNED LISTS
+   ========================= */
+.primary-text-block.text-center ul {
+    list-style: none; /* custom bullets only */
+}
+
+.primary-text-block.text-center ul li {
+    display: table;       /* table layout for custom bullets */
+    margin: 0.5em auto;
+    line-height: 1.5;
+}
+
+.primary-text-block.text-center ul li::before {
+    content: "•";
+    display: table-cell;
+    padding-right: 0.5em;
+    vertical-align: top;
+}
+
+/* OL numbers */
+.primary-text-block.text-center ol {
+    list-style: decimal inside; /* numbers inside li */
+    padding-left: 0;
+    text-align: center;         /* numbers + text centered */
+}
+
+.primary-text-block.text-center ol li {
+    display: list-item;         /* numbers appear properly */
+    margin: 0.5em 0;            /* spacing below each item */
+}
+
+.primary-text-block.text-center ol li::before {
+    content: none;              /* remove custom bullets */
+}
+
+/* Optional: span inside UL for table layout */
+.primary-text-block.text-center ul li span {
+    display: table-cell;
+    text-align: left;
+}
+
+/* Right-aligned OL numbers for <a> links only */
+.primary-text-block.text-right ol li a {
+    display: inline-block;        /* anchor wraps nicely */
+    max-width: 100%;              /* allow full width inside li */
+    word-wrap: break-word;
+    text-align: right;            /* keep text right-aligned */
+}
+
+/* li with anchor, number stays visible and aligned with left padding */
+.primary-text-block.text-right ol li:has(a) {
+    display: flex;                /* flex container for number + text */
+    justify-content: flex-end;    /* keep text right-aligned */
+    align-items: flex-start;      /* top-align number with first line */
+    gap: 0.5em;                   /* space between number and text */
+    position: relative;
+    padding-left: 1em;            
+}
+
+
+.primary-text-block.text-right ol li:has(a)::marker {
+    color: inherit;
+}
+
+
+
+
+
+
+/* mobile view  */
+@media (max-width: 767px) {
+
+    .primary-text-block h1,
+    .primary-text-block h2,
+    .primary-text-block h3,
+    .primary-text-block h4,
+    .primary-text-block h5,
+    .primary-text-block h6 {
+        max-width: 100%;
+        word-wrap: break-word;
+        white-space: normal;
+
+    }
+
+
+    /* bullet list */
+
+ /* -------------------------
+       LEFT-ALIGNED LISTS
+       ------------------------- */
+    .primary-text-block.text-left ul,
+    .primary-text-block.text-left ol {
+        padding-left: 1.5em;
+        margin: 0;
+    }
+
+    .primary-text-block.text-left ul li {
+        display: block;
+        position: relative;
+        margin-bottom: 0.6em;
+        line-height: 1.5;
+        padding-left: 1em; /* space for pseudo bullet */
+    }
+
+    .primary-text-block.text-left ul li::before {
+        content: "•";  /* bullet for UL */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1em;
+        text-align: left;
+    }
+
+    .primary-text-block.text-left ol li {
+        display: list-item;  /* show numbers */
+        padding-left: 0;
+        margin-bottom: 0.6em;
+    }
+
+    /* Nested lists for left-aligned */
+    .primary-text-block.text-left ul li ul,
+    .primary-text-block.text-left ol li ul,
+    .primary-text-block.text-left ul li ol,
+    .primary-text-block.text-left ol li ol {
+        padding-left: 1.5em;
+        margin-top: 0.3em;
+    }
+
+    /* -------------------------
+       CENTER-ALIGNED LISTS
+       ------------------------- */
+    .primary-text-block.text-center ul,
+    .primary-text-block.text-center ol {
+        padding-left: 1.2em;
+        margin: 0;
+        text-align: center;
+    }
+
+    .primary-text-block.text-center ul li {
+        display: block;
+        position: relative;
+        margin-bottom: 0.6em;
+        line-height: 1.5;
+        padding-left: 1em; /* space for bullet */
+    }
+
+    .primary-text-block.text-center ul li::before {
+        content: "•"; /* bullet for UL */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 1em;
+        text-align: center;
+    }
+
+    .primary-text-block.text-center ol li {
+        display: list-item; /* show numbers */
+        padding-left: 0;
+        margin-bottom: 0.6em;
+        position: relative;
+    }
+
+    /* Nested lists for center-aligned */
+    .primary-text-block.text-center ul li ul,
+    .primary-text-block.text-center ol li ul,
+    .primary-text-block.text-center ul li ol,
+    .primary-text-block.text-center ol li ol {
+        padding-left: 1.5em;
+        margin-top: 0.3em;
+    }
+
+    /* -------------------------
+       RIGHT-ALIGNED LISTS
+       ------------------------- */
+   /* Container padding */
+    .primary-text-block.text-right ul,
+    .primary-text-block.text-right ol {
+        padding-left: 1.5em;
+        margin: 0;
+    }
+
+    /* -----------------
+       UL: bullets only
+       ----------------- */
+    .primary-text-block.text-right ul li {
+        display: block;
+        text-align: right;
+        position: relative;
+        margin-bottom: 0.6em;
+        padding-left: 0;  /* space handled by ::before */
+    }
+
+    .primary-text-block.text-right ul li::before {
+        content: "•";        /* bullet */
+        position: absolute;
+        left: 12px;          /* adjust space from edge */
+        margin-right: 0.5em;
+    }
+
+    /* -----------------
+       OL: numbers only
+       ----------------- */
+    .primary-text-block.text-right ol {
+        list-style: decimal inside;  /* numbers visible inside li */
+    }
+
+    .primary-text-block.text-right ol li {
+        display: list-item;          /* show numbers */
+        text-align: right;
+        margin-bottom: 0.6em;
+        padding-left: 0;             /* no extra padding */
+        position: relative;
+    }
+
+    /* Anchor inside li: wrap text properly */
+    .primary-text-block.text-right ol li a {
+        display: inline-block;
+        max-width: 100%;
+        word-wrap: break-word;
+        text-align: right;
+    }
+
+    /* Nested lists */
+    .primary-text-block.text-right ul li ul,
+    .primary-text-block.text-right ol li ol {
+        padding-left: 1em;
+        margin-top: 0.3em;
+    }
+
+      /* Ensure li is block so numbers appear */
+    .primary-text-block.text-right ol li {
+        display: list-item;       /* preserve marker */
+        text-align: right;        /* right-align text */
+        position: relative;
+        margin-bottom: 0.6em;
+        padding-left: 0;          /* no extra padding */
+        list-style-position: inside; /* marker inside li */
+    }
+
+    /* Anchor inside li: remove flex and allow wrapping */
+    .primary-text-block.text-right ol li a,
+    .primary-text-block.text-right ol li span {
+        display: inline;           /* important: not flex */
+        max-width: 100%;
+        word-wrap: break-word;
+        text-align: right;
+    }
+
+    /* Nested ol inside li */
+    .primary-text-block.text-right ol li ol {
+        padding-left: 1em;
+        margin-top: 0.3em;
+    }
+
+    /* Make sure ::marker is visible */
+    .primary-text-block.text-right ol li::marker {
+        display: inline;
+        font-weight: normal;
+        color: inherit;
+        margin-left: 0.2em;
+    }
+
+
+   .primary-text-block.text-right ol li a,
+.primary-text-block.text-right ol li span {
+    display: inline; /* important: not flex */
+}
+
+.primary-text-block.text-right ol li:has(a) {
+    display: list-item; /* restore numbers */
+    text-align: right;  /* keep text aligned */
+    position: relative;
+    padding-left: 0.5em; /* optional spacing */
+}
+
+
+
+
+    .primary-text-block h1 em,
+    .primary-text-block h2 em,
+    .primary-text-block h3 em,
+    .primary-text-block h4 em,
+    .primary-text-block h5 em,
+    .primary-text-block h6 em {
+        display: inline-block !important;
+        padding-right: 0.08em !important;
+        padding-left: 0 !important;
+        margin-left: -0.05em !important;
+    }
+
+    .primary-text-block h1 em::before,
+    .primary-text-block h2 em::before,
+    .primary-text-block h3 em::before,
+    .primary-text-block h4 em::before,
+    .primary-text-block h5 em::before,
+    .primary-text-block h6 em::before,
+    .primary-text-block h1 em::after,
+    .primary-text-block h2 em::after,
+    .primary-text-block h3 em::after,
+    .primary-text-block h4 em::after,
+    .primary-text-block h5 em::after,
+    .primary-text-block h6 em::after {
+        content: none !important;
+        display: none !important;
+    }
+
+}
+
+
+
+@media (min-width:411px) and (max-width:425px) {}
+
+@media (min-width:426px) and (max-width:435px) {
+        .primary-text-block.text-right ul li::before {
+        content: "•";
+        position: absolute;
+        left: 27px !important;
+        margin-right: 0.5em;
+    }
+}
+
+@media (min-width:320px) and (max-width:380px) {
+        .primary-text-block.text-right ul li::before {
+        content: "•";
+        position: absolute;
+        left: -8px !important;
+        margin-right: 0.5em;
+    }
+}
+
+
+@media (min-width:385px) and (max-width:395px) {
+    .primary-text-block.text-right ul li::before {
+        content: "•";
+        position: absolute;
+        left: -14px !important;
+        margin-right: 0.5em;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* Ensure li is block so numbers appear */
+    .primary-text-block.text-right ol li {
+        display: list-item;       /* preserve marker */
+        text-align: right;        /* right-align text */
+        position: relative;
+        margin-bottom: 0.6em;
+        padding-left: 0;          /* no extra padding */
+        list-style-position: inside; /* marker inside li */
+    }
+
+    /* Anchor inside li: remove flex and allow wrapping */
+    .primary-text-block.text-right ol li a,
+    .primary-text-block.text-right ol li span {
+        display: inline;           /* important: not flex */
+        max-width: 100%;
+        word-wrap: break-word;
+        text-align: right;
+    }
+
+    /* Nested ol inside li */
+    .primary-text-block.text-right ol li ol {
+        padding-left: 1em;
+        margin-top: 0.3em;
+    }
+
+    /* Make sure ::marker is visible */
+    .primary-text-block.text-right ol li::marker {
+        display: inline;
+        font-weight: normal;
+        color: inherit;
+        margin-left: 0.2em;
+    }
+
+
+   .primary-text-block.text-right ol li a,
+.primary-text-block.text-right ol li span {
+    display: inline; /* important: not flex */
+}
+
+.primary-text-block.text-right ol li:has(a) {
+    display: list-item; /* restore numbers */
+    text-align: right;  /* keep text aligned */
+    position: relative;
+    padding-left: 0.5em; /* optional spacing */
+}
+
+
+
+
+
+    .primary-text-block h1,
+    .primary-text-block h2,
+    .primary-text-block h3,
+    .primary-text-block h4,
+    .primary-text-block h5,
+    .primary-text-block h6 {
+        max-width: 100%;
+        white-space: normal;
+        word-wrap: break-word;
+        margin-bottom: 0.5em;
+
+    }
+
+
+    .primary-text-block p {
+        max-width: 100%;
+        word-wrap: break-word;
+        margin-bottom: 0.5em;
+    }
+
+
+
+    /* Lists */
+    .primary-text-block.text-left ul,
+    .primary-text-block.text-left ol {
+        text-align: left;
+        padding-left: 1.2em;
+        display: block;
+    }
+
+    .primary-text-block.text-right ul,
+    .primary-text-block.text-right ol {
+        text-align: right;
+        display: block;
+    }
+
+    .primary-text-block.text-center ul,
+    .primary-text-block.text-center ol {
+        text-align: center;
+        padding-left: 0;
+        margin: 0 auto;
+
+
+    }
+
+    .primary-text-block ol li,
+    .primary-text-block ul li {
+        padding-left: 0;
+        text-indent: 0;
+        word-wrap: break-word;
+        margin-bottom: 0.5em;
+
+    }
+
+
+    .primary-text-block ol li a,
+    .primary-text-block ul li a {
+        display: inline;
+        padding-left: 0;
+    }
+
+
+    .primary-text-block ul li::before {
+        width: 0.8em;
+        display: inline-block;
+        vertical-align: top;
+        text-align: left;
+        margin-right: 0.2em;
+    }
+
+    .primary-text-block h1,
+    .primary-text-block h2,
+    .primary-text-block h3,
+    .primary-text-block h4,
+    .primary-text-block h5,
+    .primary-text-block h6 {
+        display: inline-block;
+        max-width: 100%;
+        overflow: visible;
+
+    }
+
+    .primary-text-block h1 em,
+    .primary-text-block h2 em,
+    .primary-text-block h3 em,
+    .primary-text-block h4 em,
+    .primary-text-block h5 em,
+    .primary-text-block h6 em {
+        display: inline-block !important;
+        padding-right: 0.08em !important;
+        padding-left: 0 !important;
+        margin-left: -0.05em;
+    }
+
+    .primary-text-block h1 em::before,
+    .primary-text-block h2 em::before,
+    .primary-text-block h3 em::before,
+    .primary-text-block h4 em::before,
+    .primary-text-block h5 em::before,
+    .primary-text-block h6 em::before,
+    .primary-text-block h1 em::after,
+    .primary-text-block h2 em::after,
+    .primary-text-block h3 em::after,
+    .primary-text-block h4 em::after,
+    .primary-text-block h5 em::after,
+    .primary-text-block h6 em::after {
+        content: none !important;
+        display: none !important;
+    }
+
+
+
+}

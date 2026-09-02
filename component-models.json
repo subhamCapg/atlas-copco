@@ -397,5 +397,69 @@
         ]
       }
     ]
+  },
+  {
+    "id": "primary-title",
+    "fields": [
+      {
+        "component": "text",
+        "name": "customtitle",
+        "label": "Title"
+      },
+      {
+        "component": "select",
+        "name": "classes",
+        "label": "Title Type",
+        "value": "primaryh1",
+        "options": [
+          {
+            "name": "h1",
+            "value": "primaryh1"
+          },
+          {
+            "name": "h2",
+            "value": "primaryh2"
+          },
+          {
+            "name": "h3",
+            "value": "primaryh3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "primary-text-block",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "typescaleText",
+        "label": "Text"
+      }
+    ]
+  },
+  {
+    "id": "primary-image-block",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "alt",
+        "label": "Alt Text",
+        "valueType": "string",
+        "required": true
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "testlink",
+        "label": "Link"
+      }
+    ]
   }
 ]
