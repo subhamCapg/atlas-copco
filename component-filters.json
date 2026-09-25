@@ -15,9 +15,11 @@
       "buttons",
       "primary-image-block",
       "primary-text-block",
-      "primary-title"
+      "primary-title",
+      "new-card"
     ]
   },
+  
   {
     "id": "tabcards",
     "components": [
