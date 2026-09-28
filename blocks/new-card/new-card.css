@@ -1,0 +1,23 @@
+.new-card {
+  max-width: 350px;
+  border: 1px solid #dadada;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.new-card picture img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.new-card h2,
+.new-card h3 {
+  margin: 16px;
+}
+
+.new-card p {
+  margin: 0 16px 16px;
+  color: #555;
+}
