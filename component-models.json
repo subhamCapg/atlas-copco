@@ -168,29 +168,54 @@
     ]
   },
   {
-  "id": "new-card",
-  "fields": [
-    {
-      "component": "reference",
-      "valueType": "string",
-      "name": "image",
-      "label": "Image",
-      "multi": false
-    },
-    {
-      "component": "text",
-      "valueType": "string",
-      "name": "title",
-      "label": "Title"
-    },
-    {
-      "component": "textarea",
-      "valueType": "string",
-      "name": "description",
-      "label": "Description"
-    }
-  ]
-},
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "container",
+        "name": "tabItems",
+        "label": "Tabs",
+        "multi": true,
+        "fields": [
+          {
+            "component": "text",
+            "name": "tabtitle",
+            "label": "Tab Title",
+            "valueType": "string"
+          },
+          {
+            "component": "textarea",
+            "name": "description",
+            "label": "Content",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "new-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description"
+      }
+    ]
+  },
   {
     "id": "tabcardsv2",
     "fields": [
@@ -201,7 +226,7 @@
       }
     ]
   },
-   {
+  {
     "id": "buttons",
     "fields": [
       {

@@ -16,10 +16,10 @@
       "primary-image-block",
       "primary-text-block",
       "primary-title",
-      "new-card"
+      "new-card",
+      "tabs"
     ]
   },
-  
   {
     "id": "tabcards",
     "components": [
@@ -30,6 +30,12 @@
     "id": "columns",
     "components": [
       "column"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "card"
     ]
   },
   {
