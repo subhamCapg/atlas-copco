@@ -17,7 +17,11 @@
       "primary-text-block",
       "primary-title",
       "new-card",
+<<<<<<< HEAD
       "tabs"
+=======
+      "test-block"
+>>>>>>> 5eaa3b8957bc76a0f0ef517a1f5b9df92b8468a2
     ]
   },
   {
