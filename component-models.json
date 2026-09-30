@@ -120,6 +120,51 @@
     ]
   },
   {
+    "id": "form",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "name": "subscriptionId",
+        "label": "Subscription Identifier"
+      },
+      {
+        "component": "text",
+        "name": "endpointUrl",
+        "label": "Endpoint URL"
+      },
+      {
+        "component": "text",
+        "name": "financialReportValue",
+        "label": "Financial Report Value"
+      },
+      {
+        "component": "text",
+        "name": "pressReleaseValue",
+        "label": "Press Release Value"
+      },
+      {
+        "component": "text",
+        "name": "policyLink",
+        "label": "Privacy Policy Link"
+      },
+      {
+        "component": "text",
+        "name": "buttonText",
+        "label": "Button Text"
+      }
+    ]
+  },
+  {
     "id": "tabcards",
     "fields": [
       {
@@ -168,29 +213,29 @@
     ]
   },
   {
-  "id": "new-card",
-  "fields": [
-    {
-      "component": "reference",
-      "valueType": "string",
-      "name": "image",
-      "label": "Image",
-      "multi": false
-    },
-    {
-      "component": "text",
-      "valueType": "string",
-      "name": "title",
-      "label": "Title"
-    },
-    {
-      "component": "textarea",
-      "valueType": "string",
-      "name": "description",
-      "label": "Description"
-    }
-  ]
-},
+    "id": "new-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "textarea",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description"
+      }
+    ]
+  },
   {
     "id": "tabcardsv2",
     "fields": [
@@ -201,7 +246,7 @@
       }
     ]
   },
-   {
+  {
     "id": "buttons",
     "fields": [
       {
