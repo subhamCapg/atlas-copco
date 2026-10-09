@@ -125,20 +125,7 @@ export default async function decorate(block) {
 
         cardsForTab.forEach((card) => {
 
-            /*
-             * IMPORTANT:
-             *
-             * We do NOT do:
-             *
-             * cardEl.innerHTML = `...`;
-             *
-             * because that creates completely new DOM nodes.
-             *
-             * Instead, we keep the original franklin/item resource
-             * and move its existing authored fields into the visual
-             * structure.
-             */
-
+        
             const cardEl = card.resource;
 
             /*

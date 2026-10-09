@@ -33,6 +33,14 @@
         "name": "pageimage",
         "label": "Image",
         "multi": false
+      },
+      {
+        "component": "checkbox",
+        "name": "excludeFromPublishingWorkflow",
+        "label": "Exclude from publishing workflow",
+        "valueType": "boolean",
+        "defaultValue": false,
+        "description": "Keep this page and everything below it out of the publish and unpublish to all sites workflow."
       }
     ]
   },
